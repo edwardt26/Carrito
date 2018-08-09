@@ -2,8 +2,4 @@ venta_homepage:
     path:     /
     defaults: { _controller: VentaBundle:Default:index }
 
-venta_compra:
-    path:     /Compra/Compra
-    defaults: { _controller: VentaBundle:Compra:Compra}
-
 

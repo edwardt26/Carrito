@@ -10,3 +10,4 @@
 /vendor/
 /bin/
 /composer.phar
+src/Tienda/VentaBundle/Resources/views/Compra/compra.html.twig

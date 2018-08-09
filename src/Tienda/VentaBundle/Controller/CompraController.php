@@ -7,8 +7,11 @@ use Symfony\Component\HttpFundation\Response;
 
 class CompraController extends Controller
 {
+
+
+
     public function indexAction()
     {
-        return new response('Bienvenido a compra');
+        return $this->render('TiendaVentaBundle:compra.html.twig');
     }
 }
