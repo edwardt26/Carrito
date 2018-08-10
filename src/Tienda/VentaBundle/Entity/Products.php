@@ -5,12 +5,12 @@ namespace Tienda\VentaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Product
+ * Products
  *
- * @ORM\Table(name="product")
- * @ORM\Entity(repositoryClass="Tienda\VentaBundle\Repository\ProductRepository")
+ * @ORM\Table(name="products")
+ * @ORM\Entity(repositoryClass="Tienda\VentaBundle\Repository\ProductsRepository")
  */
-class Product
+class Products
 {
     /**
      * @var int
@@ -50,7 +50,7 @@ class Product
      * Set name
      *
      * @param string $name
-     * @return Product
+     * @return Products
      */
     public function setName($name)
     {
@@ -73,7 +73,7 @@ class Product
      * Set price
      *
      * @param float $price
-     * @return Product
+     * @return Products
      */
     public function setPrice($price)
     {

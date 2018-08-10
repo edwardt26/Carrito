@@ -3,15 +3,17 @@
 namespace Tienda\VentaBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFundation\Response;
-use Symfony\Component\HttpFundation\Request;
+use Tienda\VentaBundle\Entity\Products;
 
 
 class DefaultController extends Controller
+
 {
     public function indexAction()
     {
-        return $this->render('VentaBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getEntityManager();
+        $productos = $em->getRepository('Tienda:Products')->findAll();
+
+        return $this->render('VentaBundle:Default:index.html.twig', array('productos' => $productos));
     }
 }
