@@ -56,6 +56,14 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        mappings:
+            VentaBundle:
+                mapping: true
+                type: annotation
+                dir: \Entity
+                alias: Tienda
+                prefix: Tienda\VentaBundle\Entity
+                is_bundle: true
         
 
 # Swiftmailer Configuration
