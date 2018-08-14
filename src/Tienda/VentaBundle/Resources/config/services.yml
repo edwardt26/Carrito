@@ -1,4 +1,7 @@
+parameters:
+      tienda_ventabundle.products.class: Tienda\VentaBundle\Services\ProductService
+
 services:
-#    venta.example:
-#        class: Tienda\VentaBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    tienda.ventabundle.product:
+        class: %tienda_ventabundle.products.class%
+        

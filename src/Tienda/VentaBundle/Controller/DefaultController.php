@@ -11,9 +11,10 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        
         $em = $this->getDoctrine()->getEntityManager();
-        $productos = $em->getRepository('Tienda:Products')->findAll();
-
+        $productos = $em->getRepository('Tienda:Products')->findAll();     
         return $this->render('VentaBundle:Default:index.html.twig', array('productos' => $productos));
+        
     }
 }
