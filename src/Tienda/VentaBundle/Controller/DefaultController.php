@@ -11,9 +11,9 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        $algo = $servicio->obtenerProductos()
-         return array('productos'=>$algo)   
-        return $this->render('VentaBundle:Default:index.html.twig');
+        $service = $this->get('tienda.ventabundle.product');
+        $producto = $service->listarProductos();    
+        return $this->render('VentaBundle:Default:index.html.twig', array('productos'=>$producto));
         
     }
 }

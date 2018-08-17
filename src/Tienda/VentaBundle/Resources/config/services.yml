@@ -4,4 +4,4 @@ parameters:
 services:
     tienda.ventabundle.product:
         class: %tienda_ventabundle.products.class%
-        
+        arguments: ["@doctrine.orm.entity_manager"]

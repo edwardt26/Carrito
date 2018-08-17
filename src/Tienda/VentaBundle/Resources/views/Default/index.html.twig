@@ -6,12 +6,24 @@
         <th>ID</th>
         <th>Nombre</th>
         <th>Precio</th>
+        <th>Cantidad</th>
     </tr>
     {% for producto in productos %}
     <tr>
         <td>{{ producto.id }}</td>
         <td>{{ producto.name }}</td>
         <td>{{ producto.price }}</td>
+        <td><div class="form-group">
+		    <label for="exampleFormControlSelect1"></label>
+		    <select class="form-control" name="cantidad" id="exampleFormControlSelect1">
+		      <option value="1">1</option>
+		      <option value="2">2</option>
+		      <option value="3">3</option>
+		      <option value="4">4</option>
+		      <option value="5">5</option>
+		    </select>
+            </div>
+        </td>
         <td><a href="index.php?page=products&action=add&id=<?php echo $row['product_id'] ?>">Add to cart</a></td>
     </tr>
     {% endfor %}
