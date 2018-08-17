@@ -1,7 +1,22 @@
 parameters:
       tienda_ventabundle.products.class: Tienda\VentaBundle\Services\ProductService
+      tienda_ventabundle.cartpush.class: Tienda\VentaBundle\Service\CartPushService
+      tienda_ventabundle.compra.class: Tienda\VentaBundle\Service\CompraService
+      tienda_ventabundle.delete.class: Tienda\VentaBundle\Service\DeleteService
 
 services:
     tienda.ventabundle.product:
         class: %tienda_ventabundle.products.class%
         arguments: ["@doctrine.orm.entity_manager"]
+
+    tienda.ventabundle.cartpush:
+        class: %tienda_ventabundle.cartpush.class%
+        arguments: ["@doctrine.orm.entity_manager"]
+
+    tienda.ventabundle.compra:
+        class: %tienda_ventabundle.compra.class%
+        arguments: ["@doctrine.orm.entity_manager"]
+
+    tienda.ventabundle.delete:
+        class: %tienda_ventabundle.delete.class%
+        arguments:

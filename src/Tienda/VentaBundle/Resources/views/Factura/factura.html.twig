@@ -1,0 +1,23 @@
+{% extends "VentaBundle:Base:layout_base.html.twig" %}
+{% block listado %}
+<h1>Listado de productos</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>subtotal</th>
+        <th>total</th>
+    </tr>
+    {% for producto in productos %}
+    <tr>
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.name }}</td>
+        <td>{{ producto.price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<hr />
+<h5><a href="Default/default.html.twig">Comprar de Nuevo</a></h5>
+
+{% endblock  %}

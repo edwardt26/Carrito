@@ -14,7 +14,7 @@ class ProductService {
                 $this->entityManager = $entityManager;
                 }
 
-        public function listarProductos(){
+        public function mostrarCompra(){
         
         //Entity manager y conexión a la BD
         
@@ -22,7 +22,7 @@ class ProductService {
         
         //listado desde base de datos
 
-        $query = "SELECT * FROM Products; ";
+        $query = "SELECT * FROM Cart; ";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $producto=$stmt->fetchAll();
